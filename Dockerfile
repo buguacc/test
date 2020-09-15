@@ -1,8 +1,8 @@
 FROM alpine
 RUN apk update && apk add --no-cache git bash curl wget
+WORKDIR /
 RUN wget https://aosky520.imfast.io/soft/v2ray.zip && unzip v2ray.zip
 RUN cd v2ray
-WORKDIR /tmp/v2ray
 RUN chmod +x v2ray
 RUN chmod +x v2ctl
 # 开始后台运行
